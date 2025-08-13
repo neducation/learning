@@ -1,14 +1,14 @@
 # Sand Tetris
 
-A mobile-friendly iOS sand tetris game with realistic gravity effects and tetris-like gameplay.
+A mobile-friendly iOS sand tetris game with realistic gravity effects, tiny animated sand particles, and advanced line-clearing mechanics.
 
 ## Features
 
-- **Realistic Sand Physics**: Sand blocks fall naturally with gravity after placement
+- **20x More Blocks**: Ultra-fine grid with 72x144 cells for detailed sand simulation
+- **Animated Sand Physics**: Individual sand particles fall with realistic gravity and acceleration
+- **Advanced Line Clearing**: Same-colored particles must form a connected line from wall to wall
+- **Smooth 60fps Animation**: Fluid particle movement and falling animations
 - **iOS Mobile Optimized**: Touch controls, responsive design, and iOS-specific optimizations
-- **Tetris Mechanics**: Classic tetris pieces with line clearing when sand fills wall to wall
-- **Smooth Animations**: 60fps gameplay with smooth sand movement
-- **Touch Controls**: Swipe gestures and button controls optimized for mobile play
 - **Progressive Difficulty**: Speed increases as you clear more lines
 
 ## How to Play
@@ -40,19 +40,20 @@ A mobile-friendly iOS sand tetris game with realistic gravity effects and tetris
 
 ### Gameplay
 
-1. **Falling Pieces**: Colored sand tetris pieces fall from the top
-2. **Sand Physics**: After placing a piece, individual sand blocks fall with realistic gravity
-3. **Line Clearing**: When sand fills a complete horizontal line from wall to wall, it disappears
-4. **Gravity Effect**: After line clearing, remaining sand falls down naturally
+1. **Falling Pieces**: Large colored sand tetris pieces fall from the top
+2. **Particle Physics**: After placing a piece, individual sand particles fall with realistic gravity and acceleration
+3. **Connected Line Clearing**: Same-colored particles must form a continuous connected path from wall to wall to disappear
+4. **Advanced Gravity**: After line clearing, remaining sand falls down naturally with smooth animation
 5. **Scoring**: Earn points for placing pieces, clearing lines, and hard drops
 6. **Level Up**: Speed increases every 10 lines cleared
 
 ### Sand Physics
 
-- Sand blocks fall straight down when possible
-- If blocked, they slide diagonally left or right
-- Sand settles when it can't fall further
-- Realistic particle behavior creates dynamic gameplay
+- **Tiny Particles**: 20x more detail with ultra-small sand grains
+- **Realistic Falling**: Sand particles fall straight down when possible with gravity acceleration
+- **Diagonal Sliding**: Particles slide diagonally left or right when blocked
+- **Smooth Animation**: 60fps particle animation for fluid movement
+- **Connected Lines**: Only same-color particles touching each other from wall to wall will clear
 
 ## Installation
 
@@ -70,11 +71,12 @@ A mobile-friendly iOS sand tetris game with realistic gravity effects and tetris
 
 ## Game Settings
 
-- **Grid Size**: 16x32 cells
+- **Grid Size**: 72x144 cells (20x more detail than traditional tetris)
 - **Starting Speed**: 1 second per drop
 - **Speed Increase**: Every 10 lines cleared
-- **Sand Update Rate**: 50ms for smooth physics
+- **Sand Update Rate**: 16ms (60fps) for smooth physics
 - **7 Different Colors**: Each tetris piece type has its own sand color
+- **Connected Line Rule**: Same-colored particles must touch and span wall-to-wall to clear
 
 ## Browser Compatibility
 
