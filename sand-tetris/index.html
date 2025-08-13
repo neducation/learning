@@ -1,79 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sand Block Tetris</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #181818;
-      color: #fff;
-      font-family: sans-serif;
-      height: 100%;
-      width: 100%;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-    }
-    h1 {
-      margin: 1rem 0 0.5rem 0;
-      font-size: 2rem;
-    }
-    #game {
-      background: #222;
-      border-radius: 16px;
-      box-shadow: 0 4px 24px #0008;
-      margin: 1rem 0;
-      width: 320px;
-      height: 480px;
-      max-width: 98vw;
-      max-height: 80vh;
-      position: relative;
-      overflow: hidden;
-      touch-action: manipulation;
-    }
-    @media (max-width: 400px) {
-      #game {
-        width: 98vw;
-        height: 70vw;
-        max-height: 80vh;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sand Block Tetris</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #181818;
+        color: #fff;
+        font-family: sans-serif;
+        height: 100%;
+        width: 100%;
       }
-    }
-    #controls {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    button {
-      font-size: 1.2rem;
-      padding: 0.5rem 1.2rem;
-      border-radius: 8px;
-      border: none;
-      background: #444;
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    button:active {
-      background: #666;
-    }
-  </style>
-</head>
-<body>
-  <h1>Sand Block Tetris</h1>
-  <div id="game"></div>
-  <div id="controls">
-    <button onclick="moveLeft()">◀️</button>
-    <button onclick="rotate()">🔄</button>
-    <button onclick="moveRight()">▶️</button>
-    <button onclick="drop()">⏬</button>
-  </div>
-  <script src="sand-tetris.js"></script>
-</body>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+      }
+      h1 {
+        margin: 1rem 0 0.5rem 0;
+        font-size: 2rem;
+      }
+      #game {
+        background: #222;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px #0008;
+        margin: 1rem 0;
+        width: 320px;
+        height: 480px;
+        max-width: 98vw;
+        max-height: 80vh;
+        position: relative;
+        overflow: hidden;
+        touch-action: manipulation;
+      }
+      @media (max-width: 400px) {
+        #game {
+          width: 98vw;
+          height: 70vw;
+          max-height: 80vh;
+        }
+      }
+      #controls {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      button {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.2rem;
+        border-radius: 8px;
+        border: none;
+        background: #444;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      button:active {
+        background: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sand Playground</h1>
+    <div id="game"></div>
+    <div style="font-size: 1rem; opacity: 0.7; margin-bottom: 1rem">
+      Drag your finger or mouse to drop sand anywhere!
+    </div>
+    <script src="sand-tetris.js"></script>
+  </body>
 </html>
