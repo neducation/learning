@@ -2,76 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sand Block Tetris</title>
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        background: #181818;
-        color: #fff;
-        font-family: sans-serif;
-        height: 100%;
-        width: 100%;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        min-height: 100vh;
-      }
-      h1 {
-        margin: 1rem 0 0.5rem 0;
-        font-size: 2rem;
-      }
-      #game {
-        background: #222;
-        border-radius: 16px;
-        box-shadow: 0 4px 24px #0008;
-        margin: 1rem 0;
-        width: 320px;
-        height: 480px;
-        max-width: 98vw;
-        max-height: 80vh;
-        position: relative;
-        overflow: hidden;
-        touch-action: manipulation;
-      }
-      @media (max-width: 400px) {
-        #game {
-          width: 98vw;
-          height: 70vw;
-          max-height: 80vh;
-        }
-      }
-      #controls {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1rem;
-      }
-      button {
-        font-size: 1.2rem;
-        padding: 0.5rem 1.2rem;
-        border-radius: 8px;
-        border: none;
-        background: #444;
-        color: #fff;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-      button:active {
-        background: #666;
-      }
-    </style>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <title>Sand Tetris</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Sand Playground</h1>
-    <div id="game"></div>
-    <div style="font-size: 1rem; opacity: 0.7; margin-bottom: 1rem">
-      Drag your finger or mouse to drop sand anywhere!
+    <div class="game-container">
+      <div class="game-header">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="lines">Lines: <span id="lines">0</span></div>
+        <div class="level">Level: <span id="level">1</span></div>
+      </div>
+
+      <div class="game-area">
+        <canvas id="gameCanvas" width="320" height="640"></canvas>
+        <div class="next-piece">
+          <h3>Next:</h3>
+          <canvas id="nextCanvas" width="80" height="80"></canvas>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="control-row">
+          <button id="rotateBtn" class="control-btn">↻</button>
+          <button id="downBtn" class="control-btn">↓</button>
+          <button id="dropBtn" class="control-btn">Drop</button>
+        </div>
+        <div class="control-row">
+          <button id="leftBtn" class="control-btn">←</button>
+          <button id="pauseBtn" class="control-btn">⏸</button>
+          <button id="rightBtn" class="control-btn">→</button>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <p>Tap and hold to move pieces</p>
+        <p>Sand falls with gravity after placement</p>
+        <p>Clear lines when sand fills wall to wall</p>
+      </div>
     </div>
-    <script src="sand-tetris.js"></script>
+
+    <div id="gameOverModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Game Over!</h2>
+        <p>Final Score: <span id="finalScore">0</span></p>
+        <p>Lines Cleared: <span id="finalLines">0</span></p>
+        <button id="restartBtn">Play Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
